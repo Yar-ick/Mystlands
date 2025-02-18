@@ -1,5 +1,6 @@
 # Visual Studio 2015 user specific files
 .vs/
+.vsconfig
 
 # JetBrains specific files
 .idea/*
@@ -85,13 +86,7 @@ Saved/*
 
 # Platforms folder
 Platforms/*
-/Content/ParagonGrux
-/Content/AnimationAndPolygon
+
+# Other
 /Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/Q6
 /Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap
-/Content/ParagonSteel
-/Content/CharacterBodyFX
-/Content/FXVarietyPack/
-/Content/Realistic_Starter_VFX_Pack_Vol2
-/Content/StarterContent
-/Content/Characters
