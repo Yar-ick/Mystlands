@@ -8,5 +8,5 @@ struct FFloatMessage
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float Value;
+	float Value = 1.f;
 };
