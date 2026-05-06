@@ -5,9 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
-#include "IGAbilitySystemComponent.h"
-#include "IGAttributeSet.h"
-#include "IGGameplayAbility.h"
+#include "IslandGamePrototype/GAS/IGAbilitySystemComponent.h"
+#include "IslandGamePrototype/GAS/IGAttributeSet.h"
+#include "IslandGamePrototype/GAS/GameplayAbilities/IGGameplayAbility.h"
 #include "IGCharacterBase.generated.h"
 
 UCLASS()

@@ -2,7 +2,7 @@
 
 #include "IGAttributeSet.h"
 
-#include "IGCharacterBase.h"
+#include "IslandGamePrototype/Characters/IGCharacterBase.h"
 
 UIGAttributeSet::UIGAttributeSet() {}
 

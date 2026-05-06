@@ -1,5 +1,5 @@
 #include "IGCharacterBase.h"
-#include "IGGameplayAbility.h"
+#include "IslandGamePrototype/GAS//GameplayAbilities/IGGameplayAbility.h"
 
 AIGCharacterBase::AIGCharacterBase() {
 	PrimaryActorTick.bCanEverTick = true;
