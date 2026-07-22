@@ -13,6 +13,7 @@ UCLASS()
 class ISLANDGAMEPROTOTYPE_API UIGGameplayAbility : public UGameplayAbility {
 	GENERATED_BODY()
 
+// Variables
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Cooldown")
 	FScalableFloat CooldownDuration;
@@ -25,6 +26,13 @@ public:
 	UPROPERTY(Transient)
 	FGameplayTagContainer TempCooldownTags;
 	
+protected:
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Debug")
+	bool bShowDebug;
+	
+	
+// Custom Functions
+public:
 	virtual void ApplyCooldown(
 		const FGameplayAbilitySpecHandle Handle,
 		const FGameplayAbilityActorInfo* ActorInfo,
