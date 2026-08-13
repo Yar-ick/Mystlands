@@ -69,7 +69,6 @@ float AIGCharacterBase::GetHealth() const {
 float AIGCharacterBase::GetMaxHealth() const {
 	if (!AttributeSet)
 		return 0.0f;
-
 	return AttributeSet->GetMaxHealth();
 }
 
