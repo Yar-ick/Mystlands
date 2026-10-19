@@ -90,4 +90,10 @@ Platforms/*
 # Other
 /Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/8/Q6
 /Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap
+.codex/*
+.cursor/*
+.gemini/*
+.vscode/*
 Config/DefaultEditor.ini
+Automation_IslandGamePrototype.slnx
+IslandGamePrototype.slnx
