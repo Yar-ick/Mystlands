@@ -1,5 +1,8 @@
 ﻿#include "IGGameplayAbility.h"
 
+#include "AbilitySystemBlueprintLibrary.h"
+#include "AbilitySystemComponent.h"
+
 void UIGGameplayAbility::ApplyCooldown(
 	const FGameplayAbilitySpecHandle Handle,
 	const FGameplayAbilityActorInfo* ActorInfo,
@@ -29,4 +32,21 @@ const FGameplayTagContainer* UIGGameplayAbility::GetCooldownTags() const {
 
 FGameplayAbilitySpecHandle UIGGameplayAbility::GetAbilitySpecHandle() const {
 	return Super::GetCurrentAbilitySpecHandle();
+}
+
+float UIGGameplayAbility::GetCooldownTimeRemainingForActor(AActor* Actor, FGameplayTag CooldownTag)
+{
+	float Remaining = 0.f;
+	if (const UAbilitySystemComponent* ASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Actor))
+	{
+		if (CooldownTag.IsValid())
+		{
+			const FGameplayEffectQuery Query = FGameplayEffectQuery::MakeQuery_MatchAnyOwningTags(FGameplayTagContainer(CooldownTag));
+			for (float Time : ASC->GetActiveEffectsTimeRemaining(Query))
+			{
+				Remaining = FMath::Max(Remaining, Time);
+			}
+		}
+	}
+	return Remaining;
 }

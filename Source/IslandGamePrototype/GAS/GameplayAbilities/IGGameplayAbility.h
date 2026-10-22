@@ -44,4 +44,8 @@ public:
 	// На память
 	UFUNCTION(BlueprintCallable, Category = Ability)
 	FGameplayAbilitySpecHandle GetAbilitySpecHandle() const;
+
+	/** Query cooldown effects without retaining an ability instance on the character. */
+	UFUNCTION(BlueprintPure, Category = "Abilities|Cooldown")
+	static float GetCooldownTimeRemainingForActor(AActor* Actor, FGameplayTag CooldownTag);
 };
